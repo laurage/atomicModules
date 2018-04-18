@@ -1,0 +1,25 @@
+.bg-pink {
+  background-color: pink;
+} 
+
+.c-red {
+  color: red;
+} 
+
+.pa-2 {
+  padding: 20px;
+} 
+
+.b-3 {
+  border: solid 3px;
+}
+
+.br-4 {
+  border-radius: 4px;
+}
+
+.button {
+  border: solid 3px;
+  border-radius: 4px;
+  padding: 20px;
+}
