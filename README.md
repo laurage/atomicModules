@@ -73,7 +73,8 @@ What's good about reusable modules:
 - Using components alerts the developer when designers have created too many variations of the same component. Designer’s work can be enhanced if the dev. and design team works collaboratively.
 
 What would be the best of two worlds?
-Atomic CSS with some reusable components that aren’t creating a black box effect + keeping css optimisation/performance.
+
+Atomic CSS with some reusable components that aren’t creating a black box effect + keeping css optimisation/performance + being able to look at the Inspector and understand exactly what/where to modify code in our code base to achieve the same effect than toggling classes in the Inspector does.
 
 This is what we have tried to achieve with AtomicModules
 
