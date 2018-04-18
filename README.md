@@ -5,8 +5,8 @@ Combining the power of atomic css with class-modules
 - [Start the app](#start-the-app)
 - [Structure of the source folder](#structure-of-the-source-folder)
 - [Disregard Markup](#disregard-markup)
-- [What's going on here?](#what's-going-on-here)
-- [AtomicModules: Syntax](#atomic-modules-syntax)
+- [Whats going on here?](#whats-going-on-here)
+- [AtomicModules syntax](#atomicModules-syntax)
 - [Discussing CSS Modules](#discussing-css-modules)
 
 
