@@ -1,25 +1,19 @@
-.m-bg-pink {
+.e-bg-pink {
   background-color: pink;
 } 
 
-.m-c-red {
+.e-c-red {
   color: red;
 } 
 
-.m-pa-2 {
+.e-pa-2 {
   padding: 20px;
 } 
 
-.m-b-3 {
+.e-b-3 {
   border: solid 3px;
 }
 
-.m-br-4 {
+.e-br-4 {
   border-radius: 4px;
-}
-
-.m-button {
-  border: solid 3px;
-  border-radius: 4px;
-  padding: 20px;
 }
