@@ -12,7 +12,12 @@ Combining the power of atomic css with class-modules
 
 ## Start the app
 
-cd in the project directory and run:
+In the terminal,
+`git clone https://github.com/laurage/atomicModules.git`
+`cd atomicModules`
+`npm install`
+
+and: 
 
 `npm start`
 
@@ -79,11 +84,12 @@ Atomic CSS with some reusable components that aren’t creating a black box effe
 This is what we have tried to achieve with AtomicModules
 
 ## AtomicModules: Syntax
-We're using React as 
+We're using React for our example, but we could use other frameworks.
 
 ButtonAtomicModules.js  (Corresponds to the ButtonJSMarkedExtended component in the repo)
 
 ```js
+import React from 'react'
 import './assets/globalStyles.css'
 import { button } from '../../assets/modules-js-marked'
 
