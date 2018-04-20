@@ -88,7 +88,7 @@ import './assets/globalStyles.css'
 import { button } from '../../assets/modules-js-marked'
 
 const ButtonAtomicModules = ({children}) => (
-    <button className={`${button} _utilities: m-bg-pink m-c-red m-pa-2`}>
+    <button className={`${button} _utilities: bg-pink c-red pa-2`}>
         {children}        
     </button>
 )
@@ -99,7 +99,7 @@ export default ButtonAtomicModules
 modules.js (Corresponds to the modules-js-marked-extended in the repo)
 
 ```js
-export const button = "_button: e-b-3 e-br-4 e-pa-2"
+export const button = "_button: b-3 br-4 pa-2"
 ```
 
 assets/globalStyles.css
@@ -128,7 +128,7 @@ assets/globalStyles.css
 
 In the inspector:
 `
-class="_button: m-b-3 m-br-4 m-pa-2 _utilities: m-bg-pink m-c-red m-pa-2"
+class="_button: b-3 br-4 pa-2 _utilities: bg-pink c-red pa-2"
 `
 
 ## Discussing CSS modules

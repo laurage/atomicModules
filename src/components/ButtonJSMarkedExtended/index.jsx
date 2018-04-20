@@ -1,9 +1,9 @@
 import React from 'react'
 import './style.css'
-import { button } from '../../assets/modules-js-marked'
+import { button } from '../../assets/modules-js-marked-extended'
 
 const ButtonJSMarkedExtended = ({children}) => (
-    <button className={`${button} _utilities: m-bg-pink m-c-red m-pa-2`}>
+    <button className={`${button} _utilities: e-bg-pink e-c-red`}>
         {children}        
     </button>
 )

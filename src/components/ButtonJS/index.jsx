@@ -3,7 +3,7 @@ import './style.css'
 import { button } from '../../assets/modules-js'
 
 const ButtonJS = ({children}) => (
-    <button className={`${button} j-bg-pink j-c-red j-pa-2`}>
+    <button className={`${button} j-bg-pink j-c-red`}>
         {children}        
     </button>
 )
