@@ -1,1 +1,0 @@
-export const button = "_button: e-b-3 e-br-4 e-pa-2"

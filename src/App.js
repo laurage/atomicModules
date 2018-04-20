@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ButtonTraditionalCSS from './components/ButtonTraditionalCSS'
 import ButtonJS from './components/ButtonJS'
 import ButtonJSMarked from './components/ButtonJSMarked'
-import ButtonJSMarkedExtended from './components/ButtonJSMarkedExtended'
+import ButtonAtomicModules from './components/ButtonAtomicModules'
 import './App.css'
 
 class App extends Component {
@@ -19,7 +19,7 @@ class App extends Component {
           <ButtonJSMarked>ButtonJSMarked</ButtonJSMarked>
         </div>
         <div className="box">
-          <ButtonJSMarkedExtended>ButtonJSMarkedExtended</ButtonJSMarkedExtended>
+          <ButtonAtomicModules>ButtonAtomicModules</ButtonAtomicModules>
         </div>
       </div>
     );

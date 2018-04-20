@@ -1,19 +1,19 @@
-.e-bg-pink {
+.bg-pink {
   background-color: pink;
 } 
 
-.e-c-red {
+.c-red {
   color: red;
 } 
 
-.e-pa-2 {
+.pa-2 {
   padding: 20px;
 } 
 
-.e-b-3 {
+.b-3 {
   border: solid 3px;
 }
 
-.e-br-4 {
+.br-4 {
   border-radius: 4px;
 }

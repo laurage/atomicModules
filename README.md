@@ -39,7 +39,7 @@ src/
     ButtonJSMarked/
       index.jsx
       style.css
-    ButtonJSMarkedExtended/
+    ButtonAtomicModules/
       index.jsx
       style.css
     ButtonTraditionalCSS/
@@ -51,11 +51,20 @@ src/
 
 # Disregard Markup
 
-In order to encapsulate our css for each different type of button, we have pre-fixed each class with:
-- '' > for ButtonTraditionalCSS
+In the src folder, in order to encapsulate our css for each different type of button, we have pre-fixed each class with:
+- 'c' > for ButtonTraditionalCSS
 - 'j' > for ButtonJS
 - 'm' > for ButtonJSMarked
-- 'e' > for ButtonJSMarkedExtended (our AtomicModules)
+- '' > for ButtonAtomicModules
+
+So for instance the className of ButtonTraditionalCSS are pre-fixed with `-c` to avoid them to bleed on the other button's styles:
+```js
+className="c-button c-bg-pink c-c-red"
+```
+When if we were exclusively using AtomicModules or even traditional atomic CSS, these classes would be written as: 
+```js
+className="button bg-pink c-red"
+```
 
 Please disregard these classes, as they wouldn' appear in a project where AtomicModules would be used throughout.
 
@@ -140,14 +149,15 @@ class="_button: b-3 br-4 pa-2 _utilities: bg-pink c-red pa-2"
 ## Discussing CSS modules
 
 CSS modules, and why observing their use case helps us:
+
 CSS modules harvest the power of JS and CSS to create encapsulated CSS classes that are attached to a JS object. (See explanation here: https://www.javascriptstuff.com/what-are-css-modules/)
 
-> Why it is not helpful for our purpose:
+# Why it is not helpful for our purpose:
 
 The power of CSS modules is that it encapsulates CSS. 
 However, the point of AtomicModules is NOT to encapsulate the CSS for each component in just one file. Actually, the only time where we’d need encapsulated css would be if we had an html tag that wasn’t responding to atomic css (so probably smelly code that is not following design specs - which we should avoid; AND if we really needed an encapsulated class once in a while, we could just create a BEM class for that very purpose, clearly identified as custom and gathered in one file).
 
-> Why it is helpful for our purpose:
+# Why it is helpful for our purpose:
 
 CSS modules is moving away from the traditional html/css combination (classes written in the html markup that reference directly a CSS stylesheet) to JS objects that reference CSS classes. This is what is achieved with AtomicModules too.
 Whether or not this impacts the performance of the code by adding a layer of JS between the html and the CSS, CSS modules seems to be an accepted concept, and therefore AtomicModules should be fine on that front too.

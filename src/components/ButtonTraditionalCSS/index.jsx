@@ -2,7 +2,7 @@ import React from 'react'
 import './style.css'
 
 const ButtonTraditionalCSS = ({children}) => (
-    <button className="button bg-pink c-red">
+    <button className="c-button c-bg-pink c-c-red">
         {children}
     </button>
 )

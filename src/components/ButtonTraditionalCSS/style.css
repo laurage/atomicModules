@@ -1,24 +1,24 @@
-.bg-pink {
+.c-bg-pink {
   background-color: pink;
 } 
 
-.c-red {
+.c-c-red {
   color: red;
 } 
 
-.pa-2 {
+.c-pa-2 {
   padding: 20px;
 } 
 
-.b-3 {
+.c-b-3 {
   border: solid 3px;
 }
 
-.br-4 {
+.c-br-4 {
   border-radius: 4px;
 }
 
-.button {
+.c-button {
   border: solid 3px;
   border-radius: 4px;
   padding: 20px;
