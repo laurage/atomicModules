@@ -1,16 +1,17 @@
 Combining the power of atomic css with class-modules
 
-## Table of Contents
+# Table of Contents
 
 - [Start the app](#start-the-app)
 - [Structure of the source folder](#structure-of-the-source-folder)
+- [Why are there 3 types of buttons in the repo?](#why-are-there-3-types-of-buttons-in-the-repo)
 - [Disregard Markup](#disregard-markup)
 - [What's going on here?](#whats-going-on-here)
 - [AtomicModules syntax](#atomicmodules-syntax)
 - [Discussing CSS Modules](#discussing-css-modules)
 
 
-## Start the app
+# Start the app
 
 In the terminal,
 `git clone https://github.com/laurage/atomicModules.git`
@@ -24,7 +25,7 @@ and:
 Runs the app in the development mode.
 Open http://localhost:3000 to view it in the browser.
 
-## Structure of the source folder
+# Structure of the source folder
 
 ```
 src/
@@ -49,12 +50,31 @@ src/
   App.js
 ```
 
-# Disregard Markup
+# Why are there 3 types of buttons in the repo?
+
+In the repo, 3 types of Buttons have been created, to show the logical progression from traditional CSS to Atomic Modules.
+
+`ButtonTraditionalCSS` is a button which styling is entirely governed by HTML and CSS, no javascript interfacing between the two. It mixes a module (for the .button class) and atomic css (for the .bg-pink and .c-red classes). The button class module is created in a traditional way, by putting all of the css properties needed to create the button in the .button css class. 
+
+In the inspector, this is what we can see:
+`class="button bg-pink c-red"`
+
+
+`ButtonJS` is a button that uses JS to create its module, which means that the module can be created with atomic css components. The rest of the element is built with direct atomic css (for the bg-pink and c-red classes)
+
+In the inspector, this is what we can see:
+`class="b-3 br-4 pa-2 bg-pink c-red"`
+
+`ButtonAtomicModules` is a button that uses JS to create its module, which means that the module can be created with atomic css components. In addition, the empty classes `_button` and `_utilities`, added for markup, tell the developer what each module (here, the button module) are composed of when looking at the inspector.
+
+In the inspector, this is what we can see:
+`class="_button: b-3 br-4 pa-2 _utilities: bg-pink c-red"`
+
+# Disregard Markup in the src folder
 
 In the src folder, in order to encapsulate our css for each different type of button, we have pre-fixed each class with:
 - 'c' > for ButtonTraditionalCSS
 - 'j' > for ButtonJS
-- 'm' > for ButtonJSMarked
 - '' > for ButtonAtomicModules
 
 So for instance the className of ButtonTraditionalCSS are pre-fixed with `-c` to avoid them to bleed on the other button's styles:
@@ -92,15 +112,15 @@ Atomic CSS with some reusable components that aren’t creating a black box effe
 
 This is what we have tried to achieve with AtomicModules
 
-## AtomicModules: Syntax
+# AtomicModules: Syntax
 We're using React for our example, but we could use other frameworks.
 
-ButtonAtomicModules.js  (Corresponds to the ButtonJSMarkedExtended component in the repo)
+ButtonAtomicModules.js
 
 ```js
 import React from 'react'
-import './assets/globalStyles.css'
-import { button } from '../../assets/modules-js-marked'
+import './styles.css'
+import { button } from '../../assets/modules'
 
 const ButtonAtomicModules = ({children}) => (
     <button className={`${button} _utilities: bg-pink c-red pa-2`}>
@@ -111,13 +131,13 @@ const ButtonAtomicModules = ({children}) => (
 export default ButtonAtomicModules
 ```
 
-modules.js (Corresponds to the modules-js-marked-extended in the repo)
+modules.js
 
 ```js
 export const button = "_button: b-3 br-4 pa-2"
 ```
 
-assets/globalStyles.css
+styles.css
 
 ```css
 .bg-pink {
@@ -146,18 +166,18 @@ In the inspector:
 class="_button: b-3 br-4 pa-2 _utilities: bg-pink c-red pa-2"
 `
 
-## Discussing CSS modules
+# Discussing CSS modules
 
 CSS modules, and why observing their use case helps us:
 
 CSS modules harvest the power of JS and CSS to create encapsulated CSS classes that are attached to a JS object. (See explanation here: https://www.javascriptstuff.com/what-are-css-modules/)
 
-# Why it is not helpful for our purpose:
+## Why it is not helpful for our purpose:
 
 The power of CSS modules is that it encapsulates CSS. 
 However, the point of AtomicModules is NOT to encapsulate the CSS for each component in just one file. Actually, the only time where we’d need encapsulated css would be if we had an html tag that wasn’t responding to atomic css (so probably smelly code that is not following design specs - which we should avoid; AND if we really needed an encapsulated class once in a while, we could just create a BEM class for that very purpose, clearly identified as custom and gathered in one file).
 
-# Why it is helpful for our purpose:
+## Why it is helpful for our purpose:
 
 CSS modules is moving away from the traditional html/css combination (classes written in the html markup that reference directly a CSS stylesheet) to JS objects that reference CSS classes. This is what is achieved with AtomicModules too.
 Whether or not this impacts the performance of the code by adding a layer of JS between the html and the CSS, CSS modules seems to be an accepted concept, and therefore AtomicModules should be fine on that front too.
